@@ -1,0 +1,11 @@
+go-agent:
+  build: ./agent
+  links:
+    - go-server
+
+go-server:
+  image: gocd/gocd-server:16.10.0
+  ports:
+    - "8153:8153"
+    - "8154:8154"
+
